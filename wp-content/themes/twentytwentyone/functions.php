@@ -413,6 +413,8 @@ function twenty_twenty_one_scripts() {
 
 	// Print styles.
 	wp_enqueue_style( 'twenty-twenty-one-print-style', get_template_directory_uri() . '/assets/css/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
+	
+	wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/custom-style.css' );
 
 	// Threaded comment reply styles.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

@@ -1,0 +1,218 @@
+@charset "UTF-8";
+
+.container {
+	max-width: 970px;
+	margin: 0 auto;
+}
+
+.quiz-slide {
+	position: relative;
+	padding: 60px 0;
+	text-align: center;
+}
+.quiz div.hidden {
+	display: none;
+}
+
+.quiz p, .quiz h2, .quiz h3 {
+	font-family: 'ALS Schlange sans';
+	font-style: normal;
+	text-align: center;
+}
+.quiz h2 {
+	font-weight: 900;
+	font-size: 40px;
+	line-height: 45px;
+	text-transform: uppercase;
+	color: #000000;
+	margin-bottom: 30px;
+}
+.quiz h3 {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 22px;
+	color: #000000;
+	margin-bottom: 30px;
+}
+.quiz p.name {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+	color: #000000;
+	margin-bottom: 15px;
+}
+
+.quiz .button-prev, .quiz .button-next {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 16px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #969693;
+	padding: 12px 85px;
+	background: #FFFFFF;
+	border: 1px solid #969693;
+	border-radius: 6px;
+	max-width: 225px;
+}
+.quiz .button-prev {
+	margin-right: 20px;
+}
+.quiz .button-prev.active {
+	color: #F26422;
+	border: 1px solid #F26422;
+}
+.quiz .button-next.active {
+	color: #FFFFFF;
+	background: #F26422;
+	border: 0;
+}
+.quiz .button-prev:hover, .quiz .button-next:hover {
+	cursor: default;
+}
+.quiz .button-prev.active:hover, .quiz .button-next.active:hover {
+	cursor: pointer;
+}
+.quiz .step {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+	text-align: right;
+	color: #000000;
+	position: absolute;
+	right: 0;
+	bottom: 60px;
+}
+
+.quiz .flex-blocks {
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+.quiz .item-flex {
+	text-align: center;
+	height: 250px;
+	width: calc( ( 100% - 40px ) / 2 );
+	margin: 0 0 30px;
+}
+.quiz .item-flex:nth-child(2n-1) {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.quiz .item-flex div {
+	position: relative;
+	width: 388px;
+	margin: 0 auto;
+	cursor: pointer;
+}
+.quiz .check-mark {
+	background: url('/wp-content/themes/twentytwentyone/assets/images/check-mark.svg');
+	background-size: contain;
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	width: 35px;
+	height: 35px;
+}
+.quiz .item-flex.active .check-mark {
+	background: url('/wp-content/themes/twentytwentyone/assets/images/check-mark-active.svg');
+	background-size: contain;
+}
+.quiz .item-flex div {
+	filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.25));
+	border-radius: 6px;
+	width: 394px;
+	height: 212px;
+	border: 2px solid #FFFFFF;
+}
+.quiz #third-slide .item-flex div {
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+	border-radius: 6px;
+}
+.quiz .item-flex.active div {
+	border: 2px solid #F26422;
+	filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.25));
+	border-radius: 6px;
+}
+
+.quiz .progress-bar {
+	background: url('/wp-content/themes/twentytwentyone/assets/images/progress-bar.jpg');
+	background-repeat: repeat-x;
+	width: 960px;
+	height: 14px;
+	border: 1px solid #CACACA;
+	border-radius: 5px;
+}
+
+.quiz .phone-div {
+	margin: 30px auto 0;
+	width: 390px;
+	height: 42px;
+	position: relative;
+}
+.quiz .phone-div:before {
+	content: '';
+	background: url('/wp-content/themes/twentytwentyone/assets/images/tel.png');
+	position: absolute;
+	left: 19px;
+	top: 10px;
+	width: 19px;
+	height: 19px;
+}
+.quiz .phone-div:after {
+	content: 'Ваш телефон';
+	font-family: 'ALS Schlange sans';
+	font-size: 16px;
+	line-height: 16px;
+	color: #D0D0D0;
+	position: absolute;
+	left: 58px;
+	top: 12px;
+}
+.quiz input.phone {
+	background: #FFFFFF;
+	border: 1px solid #D0D0D0;
+	border-radius: 6px;
+	width: 388px;
+	height: 40px;
+	margin: 0 auto;
+}
+
+.quiz .share {
+	font-family: 'ALS Schlange sans';
+	font-size: 18px;
+	line-height: 21px;
+	margin-left: 10px;
+}
+.quiz .share-mark {
+	width: 20px;
+	height: 20px;
+	background: #FFFFFF;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 1px;
+	cursor: pointer;
+	vertical-align: middle;
+	display: inline-block;
+	margin-right: 15px;
+}
+.quiz .share-mark.active {
+	background: url('/wp-content/themes/twentytwentyone/assets/images/checkbox-mark.png');
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: center;
+}
+
+.quiz .button-result {
+	font-weight: 900;
+	font-size: 16px;
+	line-height: 16px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	background: #F26422 !important;
+	border-radius: 6px;
+	padding: 12px 20px;
+	width: 389px;
+	margin: 20px auto 0;
+}
